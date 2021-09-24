@@ -1,0 +1,7 @@
+{
+  "name": "Farmers Bay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

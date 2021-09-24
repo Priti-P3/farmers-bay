@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Farmers Bay",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
