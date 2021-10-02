@@ -20,8 +20,8 @@
   <ion-button shape="round" color="secondary">Secondary</ion-button>
   <ion-button shape="round" color="tertiary">Tertiary</ion-button> -->
   <ion-list>
-    <ion-item *ngFor="let product of products" [routerLink]="['/products']" detail>
-      <ion-label>{{ product.name}}</ion-label>
+    <ion-item *ngFor="let category of categories" [routerLink]="['/products']" detail>
+      <ion-label>{{ category.name }}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
