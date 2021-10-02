@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Products
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,25 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Products</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <!-- <ion-button size="large" shape="round" color="primary">
+    <ion-icon slot="start" name="star"></ion-icon>
+    Fertilizers
+  </ion-button>
+  <ion-button shape="round" color="secondary">Secondary</ion-button>
+  <ion-button shape="round" color="tertiary">Tertiary</ion-button> -->
+  <ion-list>
+    <ion-item detail>
+      <ion-label>Fertilizers</ion-label>
+    </ion-item>
+    <ion-item detail>
+      <ion-label>Pesticides</ion-label>
+    </ion-item>
+    <ion-item detail>
+      <ion-label>Seeds</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
