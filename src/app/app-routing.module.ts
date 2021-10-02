@@ -11,9 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./products/fertilizers/fertilizers.module').then( m => m.FertilizersPageModule)
   },
   {
-    path: 'pesticides',
-    loadChildren: () => import('./products/pesticides/pesticides.module').then( m => m.PesticidesPageModule)
+    path: 'product-details',
+    loadChildren: () => import('./products/product-details/product-details.module').then( m => m.ProductDetailsPageModule)
   }
+
 ];
 @NgModule({
   imports: [

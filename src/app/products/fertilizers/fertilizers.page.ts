@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FertilizersPage implements OnInit {
 
-  fertilizers: any[] = [
+  products: any[] = [
     {
       "sku" : "102023232",
       "name" : "Fertilizer 1",
