@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding class="bg-color">
   <ion-list>
     <ion-item *ngFor="let product of products" [routerLink]="['/product-details']" detail>
       <ion-label>{{ product.name}}</ion-label>

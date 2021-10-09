@@ -25,10 +25,10 @@
       <ion-card-subtitle>Your own</ion-card-subtitle>
       <ion-card-title>Farmer's Bay</ion-card-title>
     </ion-card-header>
-  
+
     <ion-card-content>
       <ion-text class="black-text">Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.</ion-text>
+        and climb a mountain or spend a week in the woods. Wash your spirit clean.</ion-text>
     </ion-card-content>
   </ion-card>
   <!-- <ion-list>
@@ -43,7 +43,8 @@
   <div class="ion-margin height-1em"></div>
 
   <div class="full-width ion-margin-top ion-padding">
-    <ion-button size="large" expand="block" fill="outline" class="ion-margin">
+    <ion-button size="large" expand="block" fill="outline" class="ion-margin" *ngFor="let category of categories"
+      [routerLink]="['/products']" detail>
       <div class="width-15">
         <ion-avatar slot="start">
           <img src="../../assets/icon/fertilizers-1.png">
@@ -53,8 +54,6 @@
         Fertilizers
       </div>
     </ion-button>
-    <!-- <ion-button size="large" expand="block" fill="outline" class="ion-margin">Pesticides</ion-button>
-    <ion-button size="large" expand="block" fill="outline" class="ion-margin">Seeds</ion-button> -->
   </div>
 
 </ion-content>
