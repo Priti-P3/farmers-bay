@@ -44,14 +44,14 @@
 
   <div class="full-width ion-margin-top ion-padding">
     <ion-button size="large" expand="block" fill="outline" class="ion-margin" *ngFor="let category of categories"
-      [routerLink]="['/products']" detail>
+      [routerLink]="['/products']" [queryParams]="{categoryId: category.categoryId}" detail>
       <div class="width-15">
         <ion-avatar slot="start">
-          <img src="../../assets/icon/fertilizers-1.png">
+          <img [src]="category.iconPath">
         </ion-avatar>
       </div>
       <div class="width-85">
-        Fertilizers
+        {{ category.categoryName }}
       </div>
     </ion-button>
   </div>
