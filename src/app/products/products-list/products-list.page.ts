@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsListPage implements OnInit {
 
-  products: any[] = [
+  /*products: any[] = [
     {
       "sku" : "102023232",
       "name" : "Fertilizer 1",
@@ -68,9 +70,16 @@ export class ProductsListPage implements OnInit {
       "weight": 2,
       "unit": "kg"
     }
-  ];
+  ];*/
+  products: any;
+  categoryId = 1;
 
-  constructor() { }
+  constructor(private http: HttpClient, private route: ActivatedRoute) {
+    this.categoryId = +this.route.snapshot.queryParams['categoryId'];
+    http.get('http://localhost:8080/products?categoryId=' + this.categoryId).subscribe((products) => {
+      this.products = products;
+    });
+  }
 
   ngOnInit() {
   }

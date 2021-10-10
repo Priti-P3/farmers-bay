@@ -10,19 +10,26 @@
 <ion-app>
   <ion-header translucent>
     <ion-toolbar>
-      <ion-title>Card</ion-title>
+      <ion-title>Product</ion-title>
     </ion-toolbar>
   </ion-header>,
-  <ion-content fullscreen>
+  <ion-content *ngIf="product" fullscreen>
     <ion-card>
-      <img src="../../assets/icon/farmer.jpg">
+      <img src="https://th.bing.com/th/id/OIP.9fOM3eCwaVC3T9bPaJMGNAHaIx?pid=ImgDet&rs=1">
       <ion-card-header>
-        <ion-card-subtitle>Destination</ion-card-subtitle>
-        <ion-card-title>Madison, WI</ion-card-title>
+        <ion-card-subtitle>Price: {{ product.price | currency:'INR'}}</ion-card-subtitle>
+        <ion-card-title>{{ product.productName }}</ion-card-title>
+        <small>{{product.productShortDesc}}</small>
       </ion-card-header>
       <ion-card-content>
-        Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the Wisconsin Territory in 1836.
+        <div [innerHTML]="product.details"></div>
       </ion-card-content>
     </ion-card>
+     <!-- fab placed to the bottom end -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="createOrder()">
+        <ion-icon name="cart"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
   </ion-content>
 </ion-app>

@@ -1,13 +1,13 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Fertilizers</ion-title>
+    <ion-title>Products</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding class="bg-color">
   <ion-list>
-    <ion-item *ngFor="let product of products" [routerLink]="['/product-details']" detail>
-      <ion-label>{{ product.name}}</ion-label>
+    <ion-item *ngFor="let product of products" [routerLink]="['/product-details']" [queryParams]="{productId: product.productId}" detail>
+      <ion-label>{{ product.productName}}</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
